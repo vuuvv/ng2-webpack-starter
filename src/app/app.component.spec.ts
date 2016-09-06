@@ -1,12 +1,12 @@
-import { inject, fakeAsync, addProviders } from '@angular/core/testing';
+import { inject, TestBed, fakeAsync } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
 
 describe('App', () => {
   beforeEach(() => {
-    addProviders([
-      AppComponent
-    ]);
+    TestBed.configureTestingModule({
+      providers: [AppComponent],
+    });
   });
 
   it('should work', inject([AppComponent], (app: AppComponent) => {
